@@ -49,3 +49,11 @@ tests/ # test pytest
 - [ ] Calendario settimanale
 - [ ] Promemoria (export `.ics` e bot Telegram)
 - [ ] CI con GitHub Actions
+
+## Licenza
+
+Copyright (C) 2026 Federico Amadio
+
+Questo progetto è rilasciato con licenza [GNU AGPL-3.0](LICENSE).
+Puoi usarlo, studiarlo e modificarlo liberamente, ma le versioni derivate
+devono mantenere il copyright originale ed essere rilasciate con la stessa licenza.
