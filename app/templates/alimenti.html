@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block titolo %}Alimenti - NutriSport{% endblock %}
+{% block contenuto %}
+<h1>Alimenti</h1>
+<div class="card">
+  <p class="muted">{{ alimenti|length }} alimenti (valori per 100 g)</p>
+  <table>
+    <thead>
+      <tr><th>Nome</th><th>kcal</th><th>Proteine</th><th>Carboidrati</th><th>Grassi</th></tr>
+    </thead>
+    <tbody>
+      {% for a in alimenti %}
+      <tr>
+        <td>{{ a.nome }}</td>
+        <td>{{ a.kcal }}</td>
+        <td>{{ a.proteine }}</td>
+        <td>{{ a.carboidrati }}</td>
+        <td>{{ a.grassi }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

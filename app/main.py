@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 
-from app.routes import alimenti, ricette
+from app.routes import alimenti, pagine, ricette
 
 app = FastAPI(title="NutriSport")
 app.include_router(alimenti.router)
 app.include_router(ricette.router)
+app.include_router(pagine.router)
 
 
 @app.get("/health")

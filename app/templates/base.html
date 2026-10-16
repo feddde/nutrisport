@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titolo %}NutriSport{% endblock %}</title>
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <style>
+    :root { --bg:#f7f8fa; --card:#fff; --testo:#1c2430; --muted:#6b7686; --accento:#1f7a4d; --errore:#b3261e; --bordo:#e2e6ec; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#14181d; --card:#1d232b; --testo:#e8ecf1; --muted:#9aa5b3; --accento:#3ba776; --errore:#f2766e; --bordo:#2d3541; }
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--testo); }
+    header { background:var(--card); border-bottom:1px solid var(--bordo); padding:.8rem 1.2rem; display:flex; gap:1.5rem; align-items:center; }
+    header strong { color:var(--accento); }
+    header a { color:var(--testo); text-decoration:none; }
+    header a:hover { color:var(--accento); }
+    main { max-width:900px; margin:1.5rem auto; padding:0 1rem; }
+    .card { background:var(--card); border:1px solid var(--bordo); border-radius:8px; padding:1rem; margin-bottom:1rem; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { text-align:left; padding:.45rem .5rem; border-bottom:1px solid var(--bordo); }
+    th { color:var(--muted); font-weight:600; font-size:.85rem; }
+    input { padding:.4rem .5rem; border:1px solid var(--bordo); border-radius:6px; background:var(--bg); color:var(--testo); }
+    button { padding:.4rem .8rem; border:0; border-radius:6px; background:var(--accento); color:#fff; cursor:pointer; }
+    button.rosso { background:var(--errore); }
+    .form-riga { display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; }
+    .errore { color:var(--errore); margin:.5rem 0; }
+    .muted { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>NutriSport</strong>
+    <a href="/alimenti-pagina">Alimenti</a>
+    <a href="/ricette-pagina">Ricette</a>
+  </header>
+  <main>{% block contenuto %}{% endblock %}</main>
+</body>
+</html>
